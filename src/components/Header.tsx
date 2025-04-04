@@ -21,25 +21,25 @@ export function Header() {
             <Menu size={24} />
           </button>
           {isDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-44 bg-gray-800 divide-y divide-gray-100 rounded-lg shadow-lg">
+            <div className="absolute right-0 mt-2 w-44 divide-y bg-linear-to-bl from-gray-1 to-gray-2 divide-gray-100 rounded-lg shadow-lg">
               <ul className="py-2 text-sm text-white">
                 <li>
-                  <Link to="/" className="block px-4 py-2 hover:bg-gray-700">
+                  <Link to="/" className="block px-4 py-2 hover:text-celeste transition-colors duration-300 ease-in-out transform">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="/chisono" className="block px-4 py-2 hover:bg-gray-700">
+                  <Link to="/chisono" className="block px-4 py-2 hover:text-celeste transition-colors duration-300 ease-in-out transform">
                     Chi sono
                   </Link>
                 </li>
                 <li>
-                  <Link to="/portfolio" className="block px-4 py-2 hover:bg-gray-700">
+                  <Link to="/portfolio" className="block px-4 py-2 hover:text-celeste transition-colors duration-300 ease-in-out transform">
                     Portfolio
                   </Link>
                 </li>
                 <li>
-                  <Link to="/progetti" className="block px-4 py-2 hover:bg-gray-700">
+                  <Link to="/progetti" className="block px-4 py-2 hover:text-celeste transition-colors duration-300 ease-in-out transform">
                     Progetti
                   </Link>
                 </li>
