@@ -8,18 +8,15 @@ export function Header() {
   return (
     <nav className="bg-linear-to-bl from-gray-1 to-gray-2 border-gray-200">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <div className="text-white text-2xl hover:text-celeste transition-colors duration-300 ease-in-out transform">
-  <Link to="/">Pierluigi Papa</Link>
-</div>
-
+        <div className="text-white text-2xl hover:text-celeste transition-colors duration-300 ease-in-out transform">
+          <Link to="/">Pierluigi Papa</Link>
+        </div>
 
         <div className="md:hidden relative">
-          <button
-            onClick={() => setDropdownOpen(!isDropdownOpen)}
-            className="text-white p-2"
-          >
+          <button onClick={() => setDropdownOpen(!isDropdownOpen)} className="text-white p-2">
             <Menu size={24} />
           </button>
+          
           {isDropdownOpen && (
             <div className="absolute right-0 mt-2 w-44 divide-y bg-linear-to-bl from-gray-1 to-gray-2 divide-gray-100 rounded-lg shadow-lg">
               <ul className="py-2 text-sm text-white">
@@ -49,7 +46,7 @@ export function Header() {
         </div>
 
         <div className="hidden md:block md:w-auto">
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
             <li>
               <Link to="/" className="block py-2 px-3 text-white md:p-0 md:hover:text-celeste transition-colors duration-300 ease-in-out transform">
                 Home
