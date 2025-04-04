@@ -19,7 +19,7 @@ export function Footer() {
             </div>
             
             <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-            <span className="block text-sm sm:text-center text-white hover:text-celeste transition-colors duration-300 ease-in-out transform">© 2025 <a href="" className="text-white hover:text-celeste transition-colors duration-300 ease-in-out transform">Pierluigi Papa</a>. Tutti i diritti riservati.</span>
+            <span className="block text-md sm:text-center text-white hover:text-celeste transition-colors duration-300 ease-in-out transform">&copy;2025 Pierluigi Papa. Tutti i diritti riservati </span>
         </div>
     </footer>
     );
