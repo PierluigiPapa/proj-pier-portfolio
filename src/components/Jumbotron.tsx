@@ -45,25 +45,25 @@ export function Jumbotron() {
                         </p>
 
                         <div className="my-4">
-                            <button className="bg-white text-celeste text-3xl rounded-2xl border-2 border-celeste w-13 h-13 mx-2">
+                            <button className="bg-white text-celeste text-3xl rounded-2xl border-2 border-celeste transition ease-in-out hover:bg-celeste hover:text-white hover:border-2 hover:border-white w-13 h-13 mx-2">
                                 <a href="https://www.linkedin.com/in/pierluigipapa/" target="_blank">
                                     <FontAwesomeIcon icon={faLinkedinIn}/>
                                 </a>
                             </button>
 
-                            <button className="bg-white text-celeste text-3xl rounded-2xl border-2 border-celeste w-13 h-13 mx-2">
+                            <button className="bg-white text-celeste text-3xl rounded-2xl border-2 border-celeste transition ease-in-out hover:bg-celeste hover:text-white hover:border-2 hover:border-white w-13 h-13 mx-2">
                                 <a href="https://github.com/PierluigiPapa" target="_blank">
                                     <FontAwesomeIcon icon={faGithub}/>
                                 </a>
                             </button>
 
-                            <button className="bg-white text-celeste text-3xl rounded-2xl border-2 border-celeste w-13 h-13 mx-2">
+                            <button className="bg-white text-celeste text-3xl rounded-2xl border-2 border-celeste transition ease-in-out hover:bg-celeste hover:text-white hover:border-2 hover:border-white w-13 h-13 mx-2">
                                 <a href="mailto:pierluigipapa9@gmail.com/" target="_blank">
                                     <FontAwesomeIcon icon={faEnvelope} />
                                 </a>
                             </button>
 
-                            <button onClick={downloadCV} className="bg-white text-celeste text-3xl rounded-2xl border-2 border-celeste w-13 h-13 mx-2">
+                            <button onClick={downloadCV} className="bg-white text-celeste text-3xl rounded-2xl border-2 border-celeste transition ease-in-out hover:bg-celeste hover:text-white hover:border-2 hover:border-white w-13 h-13 mx-2">
                                 <FontAwesomeIcon icon={faDownload} />
                             </button>
                         </div>
