@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Menu } from "lucide-react";
+import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function Header() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="bg-linear-to-bl from-gray-1 to-gray-2 border-gray-200">
+    <nav className="bg-gradient-to-b from-gray-1 to-gray-2 border-gray-200">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="text-white text-2xl hover:text-celeste transition-colors duration-300 ease-in-out transform">
           <Link to="/">Pierluigi Papa</Link>
@@ -14,7 +15,7 @@ export function Header() {
 
         <div className="md:hidden relative">
           <button onClick={() => setDropdownOpen(!isDropdownOpen)} className="text-white p-2">
-            <Menu size={24} />
+            <FontAwesomeIcon icon={faBars} />
           </button>
           
           {isDropdownOpen && (
