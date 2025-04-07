@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import PierluigiPapa from '../assets/PierluigiPapa.png'
 
 
 export function Jumbotron() {
 
     const [showName, setShowName] = useState(false);
     const [showJob, setShowJob] = useState(false);
+    const [showPhoto, setShowPhoto] = useState(false);
 
     const downloadCV = () => {
         const link = document.createElement('a');
@@ -22,16 +24,18 @@ export function Jumbotron() {
     useEffect(() => {
         const name = setTimeout(() => setShowName(true), 700);
         const job = setTimeout(() => setShowJob(true), 1400);
+        const photo = setTimeout(() => setShowPhoto(true), 700)
 
         return () => {
             clearTimeout(name);
             clearTimeout(job);
+            clearTimeout(photo);
         };
     }, []);
 
     return (
         <section className="bg-gradient-to-t from-gray-1 to-gray-2">
-            <div className="flex flex-col md:flex-row items-center justify-center max-w-screen-xl mx-auto px-4 py-20">
+            <div className="flex flex-col md:flex-row items-center justify-center max-w-screen-xl mx-auto">
                 <div className="w-full md:w-6xl flex justify-center mb-10 md:mb-0">
                     <div>
                         <h1 className="text-white text-5xl font-bold my-4">Ciao, sono {''} 
@@ -71,7 +75,7 @@ export function Jumbotron() {
                 </div>
 
                 <div className="w-full md:w-2xl flex justify-center items-center">
-                   <span className="text-4xl font-bold text-white">FOTO PIERLUIGI PAPA</span>
+                   <img src={PierluigiPapa} className={`transition-opacity duration-500 ${showPhoto ? 'opacity-100' : 'opacity-0'}`}   alt="" />
                 </div>
             </div>       
         </section>
