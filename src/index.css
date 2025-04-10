@@ -4,7 +4,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #1D70A2;
+  background: rgb(29,112,162);
+  background: linear-gradient(#1D70A2, #173753);
 }
 
 @theme {
