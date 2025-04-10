@@ -49,25 +49,25 @@ export function Jumbotron() {
                         </p>
 
                         <div className="my-4 md:flex md:justify-start flex justify-center">
-                            <button className="bg-white text-celeste text-2xl md:text-3xl rounded-2xl border-2 border-celeste transition ease-in-out md:hover:bg-celeste md:hover:text-white md:hover:border-white md:hover:scale-110 active:bg-celeste active:text-white active:border-white active:scale-125 mx-2 w-11 h-11 md:w-13 md:h-13">
+                            <button className="bg-white text-celeste text-2xl md:text-3xl rounded-2xl border-2 border-celeste transition ease-in-out md:hover:bg-celeste md:hover:text-white md:hover:border-white md:hover:scale-110 mx-2 w-11 h-11 md:w-13 md:h-13">
                                 <a href="https://www.linkedin.com/in/pierluigipapa/" target="_blank">
                                     <FontAwesomeIcon icon={faLinkedinIn}/>
                                 </a>
                             </button>
 
-                            <button className="bg-white text-celeste text-2xl md:text-3xl rounded-2xl border-2 border-celeste transition ease-in-out md:hover:bg-celeste md:hover:text-white md:hover:border-white md:hover:scale-110 focus:bg-celeste focus:text-white focus:border-white focus:scale-125 mx-2 w-11 h-11 md:w-13 md:h-13">
+                            <button className="bg-white text-celeste text-2xl md:text-3xl rounded-2xl border-2 border-celeste transition ease-in-out md:hover:bg-celeste md:hover:text-white md:hover:border-white md:hover:scale-110 mx-2 w-11 h-11 md:w-13 md:h-13">
                                 <a href="https://github.com/PierluigiPapa" target="_blank">
                                     <FontAwesomeIcon icon={faGithub}/>
                                 </a>
                             </button>
 
-                            <button className="bg-white text-celeste text-2xl md:text-3xl rounded-2xl border-2 border-celeste transition ease-in-out md:hover:bg-celeste md:hover:text-white md:hover:border-white md:hover:scale-110 active:bg-celeste active:text-white active:border-white active:scale-125 mx-2 w-11 h-11 md:w-13 md:h-13">
+                            <button className="bg-white text-celeste text-2xl md:text-3xl rounded-2xl border-2 border-celeste transition ease-in-out md:hover:bg-celeste md:hover:text-white md:hover:border-white md:hover:scale-110 mx-2 w-11 h-11 md:w-13 md:h-13">
                                 <a href="mailto:pierluigipapa9@gmail.com/" target="_blank">
                                     <FontAwesomeIcon icon={faEnvelope} />
                                 </a>
                             </button>
 
-                            <button onClick={downloadCV} className="bg-white text-celeste text-2xl md:text-3xl rounded-2xl border-2 border-celeste transition ease-in-out md:hover:bg-celeste md:hover:text-white md:hover:border-white md:hover:scale-110 focus:bg-celeste focus:text-white focus:border-white focus:scale-110 mx-2 w-11 h-11 md:w-13 md:h-13">
+                            <button onClick={downloadCV} className="bg-white text-celeste text-2xl md:text-3xl rounded-2xl border-2 border-celeste transition ease-in-out md:hover:bg-celeste md:hover:text-white md:hover:border-white md:hover:scale-110 mx-2 w-11 h-11 md:w-13 md:h-13">
                                 <FontAwesomeIcon icon={faDownload} />
                             </button>
                         </div>
