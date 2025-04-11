@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Logo  from "../assets/Logo.png"
+
 
 export function Header() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -10,12 +12,14 @@ export function Header() {
     <nav className="bg-gradient-to-b from-gray-1 to-gray-2 border-gray-200 ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="text-white text-2xl hover:text-celeste transition-colors duration-300 ease-in-out transform">
-          <Link to="/">Pierluigi Papa</Link>
+          <Link to="/">
+            <img src={Logo} alt="Logo Pierluigi Papa WD"className="h-32 object-contain items-center"/>
+          </Link>
         </div>
 
         <div className="md:hidden relative">
-          <button onClick={() => setDropdownOpen(!isDropdownOpen)} className="text-white p-2">
-            <FontAwesomeIcon icon={faBars} />
+          <button onClick={() => setDropdownOpen(!isDropdownOpen)} className="text-white p-2 text-2xl active:text-celeste">
+            <FontAwesomeIcon icon={faBars}/>
           </button>
           
           {isDropdownOpen && (

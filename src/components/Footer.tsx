@@ -1,26 +1,24 @@
+import Logo from '../assets/Logo.png'
 
 export function Footer() {
-  
-
   return (
     <footer className="bg-linear-to-bl from-gray-1 to-gray-2 border-gray-200">
-        <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-            <div className="sm:flex sm:items-center sm:justify-between">
-                <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                    <span className="text-white text-2xl hover:text-celeste transition-colors duration-300 ease-in-out transform">
-                        LOGO PIERLUIGI PAPA
-                    </span>
-                </a>
-                <ul className="flex flex-col font-medium p-4 md:p-0 mt-4  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-                    <li>
-                        <a href="#" className="block py-2 px-3 text-white  md:hover:bg-transparent md:border-0 md:hover:text-celeste transition-colors duration-300 ease-in-out transform md:p-0">Torna su</a>
-                    </li>
-                </ul>
-            </div>
-            
-            <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-            <span className="block text-md sm:text-center text-white hover:text-celeste transition-colors duration-300 ease-in-out transform">&copy;2025 Pierluigi Papa. Tutti i diritti riservati </span>
+      <div className="w-full max-w-screen-xl mx-auto px-4 py-2 md:py-4">
+        <div className="sm:flex sm:items-center sm:justify-between flex justify-center items-center">
+          <img src={Logo} alt="Logo_Pierluigi_Papa_WD" className="h-24 object-contain opacity-50 flex"/>
+          <ul className="flex flex-col font-medium mt-2 md:mt-0 md:flex-row md:space-x-6">
+            <li>
+              <a href="#" className="block py-1 px-3 text-white hover:text-celeste transition-colors duration-300 text-center active:text-celeste active:transition-colors active:duration-300">
+                    Torna su
+              </a>
+            </li>
+          </ul>
         </div>
+        <hr className="my-2 border-gray-200" />
+        <span className="block text-sm text-white text-center hover:text-celeste transition-colors duration-300 active:text-celeste active:transition-colors active:duration-300">
+          &copy;2025 Pierluigi Papa. Tutti i diritti riservati
+        </span>
+      </div>
     </footer>
-    );
+  );
 }
