@@ -17,8 +17,10 @@ export function ProjectSection() {
 
     return (
         <>
-            <section className="w-full relative flex flex-col items-center my-4">
-                <h1 className="text-white text-3xl whitespace-nowrap md:text-5xl text-center font-bold my-4">Progetti</h1>
+            <section className="w-full relative flex flex-col items-center my-4 md:my-4">
+                <h1 className="text-white text-3xl whitespace-nowrap md:text-5xl text-center font-bold md:my-2 my-4">
+                    Progetti
+                </h1>
                 
                 <div className="flex justify-center items-center md:hidden h-40 overflow-hidden">
                     <img src={project[current]} alt={`project ${current}`} className="max-h-40"/>

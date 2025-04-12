@@ -17,8 +17,8 @@ export function FrameworkSection() {
 
     return (
         <>
-            <section className="w-full relative flex flex-col items-center my-10">
-                <h1 className="text-white text-3xl whitespace-nowrap md:text-5xl text-center font-bold">
+             <section className="w-full relative flex flex-col items-center my-4 md:my-4">
+                <h1 className="text-white text-3xl whitespace-nowrap md:text-5xl text-center font-bold md:my-2 my-4">
                     Competenze tecniche
                 </h1>
 
@@ -30,7 +30,7 @@ export function FrameworkSection() {
                     />
                 </div>
 
-                <div className="hidden md:flex justify-center items-center gap-12 h-48 overflow-hidden mt-6">
+                <div className="hidden md:flex justify-center items-center gap-12 h-48 overflow-hidden">
                     {[getIndex(-1), current, getIndex(1)].map((index, i) => (
                         <img
                             key={index}
