@@ -17,7 +17,7 @@ export function ProjectSection() {
 
     return (
         <>
-            <section className="w-full relative flex flex-col items-center my-4 md:my-4">
+            <section className="w-full relative flex flex-col items-center md:my-4 mb-4">
                 <h1 className="text-white text-3xl whitespace-nowrap md:text-5xl text-center font-bold md:my-2 my-4">
                     Progetti
                 </h1>

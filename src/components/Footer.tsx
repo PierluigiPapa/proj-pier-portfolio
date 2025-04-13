@@ -13,8 +13,8 @@ export function Footer() {
             Torna su
           </a>
           
-          <a href="#"className="block md:hidden text-white active:text-celeste transition-colors duration-300 text-center">
-            <FontAwesomeIcon icon={faArrowUp} className='text-xl my-2'/>
+          <a href="#"className="block md:hidden text-white text-center active:text-celeste active:transition-colors active:duration-300">
+            <FontAwesomeIcon icon={faArrowUp} className="text-xl my-2"/>
           </a>
         </div>
 
