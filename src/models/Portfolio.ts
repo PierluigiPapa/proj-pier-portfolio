@@ -7,5 +7,11 @@ export type Portfolio = {
     github: string,
     api: string[],
     linguaggi: string[],
-    versioni: string []
+    versioni: {
+        desktop: boolean
+        tablet: boolean
+        mobile: boolean
+    }
+    caratteristiche: string[],
+    screenshot: string[],
 }
