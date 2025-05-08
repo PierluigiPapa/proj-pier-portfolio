@@ -64,13 +64,13 @@ export function ChiSonoPage() {
 
       <section ref={careerRef} className="text-white py-10 px-4 md:px-12">
         <div className="flex flex-col md:flex-row items-start gap-8">
-          <motion.div className="md:w-1/2 flex flex-col items-center"
+          <motion.div 
+            className="md:w-1/2 hidden justify-center"
             initial={{ opacity: 0, x: -50 }}
             animate={careerInView ? { opacity: 1, y: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6 }}
           >
-            <img src={photos[0]} alt="" className="w-[500px] h-[500px] object-cover rounded-xl shadow-lg flex"/>
-            <img src={photos[2]} alt="" className="w-[290px] h-[400px] object-contain shadow-lg rounded-xl mt-4 flex transition-transform duration-300 hover:scale-150"/>
+            <img src={photos[0]} alt="" className="w-[500px] h-[500px] object-cover rounded-xl shadow-lg"/>
           </motion.div>
 
           <div className="md:w-1/2 text-lg">
@@ -133,6 +133,19 @@ export function ChiSonoPage() {
               nello sviluppo di applicazioni scalabili e performanti.
             </motion.p>
           </div>
+
+          <motion.div
+            className="block md:hidden justify-center"
+            initial={{ opacity: 0, x: 50 }}
+            animate={bioRef ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.6}}
+          >
+            <img
+              src={photos[0]}
+              className="w-[500px] h-[500px] object-cover rounded-xl shadow-lg"
+              alt=""
+            />
+          </motion.div>
         </div>
       </section>
 
