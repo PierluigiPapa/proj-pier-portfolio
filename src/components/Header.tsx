@@ -41,11 +41,6 @@ export function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/progetti" className="block px-4 py-2 hover:text-celeste active:text-celeste transition-colors duration-300 ease-in-out transform">
-                    Progetti
-                  </Link>
-                </li>
-                <li>
                   <Link to="/servizi" className="block px-4 py-2 hover:text-celeste active:text-celeste transition-colors duration-300 ease-in-out transform">
                     Servizi
                   </Link>
