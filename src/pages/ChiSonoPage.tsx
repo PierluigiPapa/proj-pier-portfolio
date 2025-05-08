@@ -65,7 +65,7 @@ export function ChiSonoPage() {
       <section ref={careerRef} className="text-white py-10 px-4 md:px-12">
         <div className="flex flex-col md:flex-row items-start gap-8">
           <motion.div 
-            className="md:w-1/2 hidden justify-center"
+            className="hidden md:w-1/2 md:flex justify-center"
             initial={{ opacity: 0, x: -50 }}
             animate={careerInView ? { opacity: 1, y: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6 }}
