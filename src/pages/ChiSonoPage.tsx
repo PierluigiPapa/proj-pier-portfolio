@@ -12,21 +12,26 @@ export function ChiSonoPage() {
   const careerInView = useInView(careerRef, { once: true, amount: 0.3 });
   const meInView = useInView(meRef, { once: true, amount: 0.3 });
 
-
   return (
     <>
-      <motion.h1 ref={salutoRef}
+      <motion.h1
+        ref={salutoRef}
         className="text-white text-center my-4 md:text-6xl text-4xl font-bold pt-4"
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        transition={{ duration: 0.8, delay: 0.2}}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
       >
         Piacere Pierluigi
       </motion.h1>
 
-      <section ref={bioRef} className="flex flex-col md:flex-row gap-8 py-10 px-4 md:px-12 items-start justify-start">
+      {/* BIOGRAFIA */}
+      <section
+        ref={bioRef}
+        className="flex flex-col md:flex-row gap-8 py-10 px-4 md:px-12 items-start justify-start"
+      >
         <div className="text-white text-lg md:w-1/2">
-          <motion.h2 className="text-2xl md:text-4xl font-bold"
+          <motion.h2
+            className="text-2xl md:text-4xl font-bold"
             initial={{ opacity: 0, y: 20 }}
             animate={bioInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -34,7 +39,8 @@ export function ChiSonoPage() {
             La mia storia
           </motion.h2>
 
-          <motion.p className="text-justify mt-4 leading-relaxed"
+          <motion.p
+            className="text-justify mt-4 leading-relaxed"
             initial={{ opacity: 0 }}
             animate={bioInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -49,32 +55,41 @@ export function ChiSonoPage() {
         </div>
 
         <motion.div
-          className="md:w-1/2 flex justify-center"
+          className="md:w-1/2 flex justify-center px-4"
           initial={{ opacity: 0, x: 50 }}
-          animate={bioRef ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-          transition={{ duration: 0.6}}
+          animate={bioInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+          transition={{ duration: 0.6 }}
         >
           <img
             src={photos[0]}
-            className="w-[500px] h-[500px] object-cover rounded-xl shadow-lg"
+            className="w-full max-w-[500px] h-[500px] object-cover rounded-xl shadow-lg"
             alt=""
           />
         </motion.div>
       </section>
 
-      <section ref={careerRef} className="text-white py-10 px-4 md:px-12">
+      {/* CARRIERA */}
+      <section
+        ref={careerRef}
+        className="text-white py-10 px-4 md:px-12"
+      >
         <div className="flex flex-col md:flex-row items-start gap-8">
-          <motion.div 
-            className="hidden md:w-1/2 md:flex justify-center"
-            initial={{ opacity: 0, x: -50 }}
-            animate={careerInView ? { opacity: 1, y: 0 } : { opacity: 0, x: -50 }}
+          <motion.div
+            className="md:w-1/2 flex justify-center px-4"
+            initial={{ opacity: 0, x: 50 }}
+            animate={careerInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.6 }}
           >
-            <img src={photos[0]} alt="" className="w-[500px] h-[500px] object-cover rounded-xl shadow-lg"/>
+            <img
+              src={photos[0]}
+              className="w-full max-w-[500px] h-[500px] object-cover rounded-xl shadow-lg"
+              alt=""
+            />
           </motion.div>
 
           <div className="md:w-1/2 text-lg">
-            <motion.h2 className="text-2xl md:text-4xl font-bold"
+            <motion.h2
+              className="text-2xl md:text-4xl font-bold"
               initial={{ opacity: 0, y: 20 }}
               animate={careerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -82,7 +97,8 @@ export function ChiSonoPage() {
               La mia carriera professionale
             </motion.h2>
 
-            <motion.p className="mt-4 text-justify leading-relaxed"
+            <motion.p
+              className="mt-4 text-justify leading-relaxed"
               initial={{ opacity: 0 }}
               animate={careerInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -102,7 +118,8 @@ export function ChiSonoPage() {
               team.
             </motion.p>
 
-            <motion.p className="mt-4 text-justify leading-relaxed"
+            <motion.p
+              className="mt-4 text-justify leading-relaxed"
               initial={{ opacity: 0 }}
               animate={careerInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -117,10 +134,10 @@ export function ChiSonoPage() {
               professionali come Visual Studio e SQL Server Management Studio.
               Questa esperienza mi ha permesso di crescere anche dal punto di
               vista del problem solving e del lavoro in team in un contesto
-              aziendale reale.
-            </motion.p>
+              aziendale reale.            </motion.p>
 
-            <motion.p className="mt-4 text-justify leading-relaxed"
+            <motion.p
+              className="mt-4 text-justify leading-relaxed"
               initial={{ opacity: 0 }}
               animate={careerInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
@@ -133,23 +150,14 @@ export function ChiSonoPage() {
               nello sviluppo di applicazioni scalabili e performanti.
             </motion.p>
           </div>
-
-          <motion.div
-            className="block md:hidden justify-center"
-            initial={{ opacity: 0, x: 50 }}
-            animate={bioRef ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.6}}
-          >
-            <img
-              src={photos[0]}
-              className="w-[500px] h-[500px] object-cover rounded-xl shadow-lg"
-              alt=""
-            />
-          </motion.div>
         </div>
       </section>
 
-      <section ref={meRef} className="flex flex-col md:flex-row gap-8 py-10 px-4 md:px-12 items-start justify-start">
+      {/* INTERESSI PERSONALI */}
+      <section
+        ref={meRef}
+        className="flex flex-col md:flex-row gap-8 py-10 px-4 md:px-12 items-start justify-start"
+      >
         <div className="text-white text-lg md:w-1/2">
           <motion.h2
             className="text-2xl md:text-4xl font-bold"
@@ -177,15 +185,18 @@ export function ChiSonoPage() {
         </div>
 
         <motion.div
-          className="md:w-1/2 flex justify-center"
+          className="md:w-1/2 flex justify-center px-4"
           initial={{ opacity: 0, x: 50 }}
           animate={meInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
           transition={{ duration: 0.6 }}
         >
-          <img src={photos[1]} alt="" className="w-[500px] h-[500px] object-cover rounded-xl shadow-lg flex"/>
-
+          <img
+            src={photos[1]}
+            className="w-full max-w-[500px] h-[500px] object-cover rounded-xl shadow-lg"
+            alt=""
+          />
         </motion.div>
       </section>
     </>
   );
-};
+}
