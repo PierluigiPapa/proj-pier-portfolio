@@ -13,5 +13,4 @@ export type Portfolio = {
         mobile: boolean
     }
     caratteristiche: string[],
-    screenshot: string[],
 }

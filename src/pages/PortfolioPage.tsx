@@ -1,14 +1,20 @@
-import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
-import { progetti } from "../utility/PortfolioData";
+import { progetti } from "../utility/ProjectData";
 import { ModalPortfolio } from "../components/ModalPortfolio";
 import { Portfolio } from "../models/Portfolio";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 
 export function PortfolioPage() {
     const [progettoSelezionato, setProgettoSelezionato] = useState<Portfolio | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        setIsVisible(true)
+    }, [])
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -46,13 +52,36 @@ export function PortfolioPage() {
             <div className="bg-gradient-to-t from-gray-1 to-gray-2">
                 <div className="flex flex-row items-center justify-center max-w-screen-xl mx-auto">
                     <div className="w-full flex justify-center mb-10">
-                        <div>
-                            <h1 className="text-white text-3xl text-center font-bold my-4 sm:text-5xl">
-                                Scorri per vedere il mio portfolio
-                            </h1>
-                            <h1 className="text-white text-xl text-center font-bold my-4">
-                                Foto da scattare
-                            </h1>
+                        <div className="px-4">
+                           <motion.h1 className="text-white text-3xl text-center font-bold my-4 sm:text-5xl"
+                                initial={{ opacity: 0, y: -20 }}
+                                animate={{
+                                    opacity: isVisible ? 1 : 0,
+                                    y: isVisible ? 0 : -20,
+                                }}
+                                transition={{ duration: 0.8 }}
+                                >
+                                    Scorri per vedere il mio portfolio
+                            </motion.h1>
+
+                            <motion.div className="w-full flex justify-center items-center"
+                                initial={{ opacity: 0 }}
+                                animate={{
+                                    opacity: isVisible ? 1 : 0,
+                                }}
+                                transition={{ delay: 0.5, duration: 0.8 }}
+                            >
+                                <motion.div animate={{y: [0, 10, 0],}}
+                                    transition={{
+                                        repeat: Number.POSITIVE_INFINITY,
+                                        duration: 1.5,
+                                        ease: "easeInOut",
+                                    }}
+                                    className="text-white"
+                                >
+                                    <FontAwesomeIcon icon={faAngleDown} className="text-4xl"/>
+                                </motion.div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>

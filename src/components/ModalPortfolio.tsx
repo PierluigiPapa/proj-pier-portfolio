@@ -84,8 +84,8 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
                         </div>
 
                         <div className="p-6 bg-celeste/50">
-                            <div className="relative h-[300px] w-full rounded-xl overflow-hidden mb-8">
-                                <img src={progetto.immagine} alt={progetto.titolo} className="object-cover w-[100vw]"/>
+                            <div className="mb-3 h rounded-xl overflow-hidden md:mb-8">
+                                <img src={progetto.immagine} alt={progetto.titolo} className="object-contain"/>
                             </div>
 
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -103,17 +103,6 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
                                         <li key={index}>{caratteristica}</li>
                                     ))} 
                                 </ul>
-                            </div>
-
-                            <div className="mb-6">
-                                <h3 className="text-xl font-semibold text-white mb-3">Screenshot</h3>
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                    {progetto.screenshot.map((screenshots, index) => (
-                                        <div key={index} className="relative h-48 rounded-lg overflow-hidden">
-                                            <img src={screenshots} alt={progetto.titolo} className="object-cover hover:scale-105 transition-transform duration-300 max-w-[768px]"/>
-                                        </div>
-                                    ))}
-                                </div>
                             </div>
                         </div>
 

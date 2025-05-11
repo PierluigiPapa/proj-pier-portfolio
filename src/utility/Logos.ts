@@ -20,7 +20,7 @@ import PostgreSQL from "../assets/images/logos/PostgreSQL.png";
 import ReactJS from "../assets/images/logos/React.png";
 import SASS from "../assets/images/logos/SASS.png";
 import SMSS from "../assets/images/logos/SSMS.png";
-import SpringBoot from "../assets/images/logos/SpringBoot.png";
+import SpringBoot from "../assets/images/logos/Spring Boot.png";
 import Tailwind from "../assets/images/logos/Tailwind.png"
 import TypeScript from "../assets/images/logos/TypeScript.png";
 import VisualStudio from "../assets/images/logos/Visual Studio.png";
