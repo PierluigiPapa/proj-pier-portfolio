@@ -3,7 +3,7 @@ import CardPokemon from "../assets/images/projects/Card_Pokemon.png";
 import MasterStudy from "../assets/images/projects/MasterStudy.jpg";
 import YuGiOh from "../assets/images/projects/Yu_Gi_Oh.png";
 
-export const project = [
+export const Project = [
     BoolBnb,
     CardPokemon,
     MasterStudy,
