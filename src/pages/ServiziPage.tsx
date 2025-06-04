@@ -1,5 +1,3 @@
-"use client"
-
 import { motion, useInView } from "framer-motion"
 import { useEffect, useState, useRef } from "react"
 import { services } from "../utility/ServicesData"
@@ -10,7 +8,7 @@ import { faCircleCheck } from "@fortawesome/free-solid-svg-icons/faCircleCheck"
 export function ServiziPage() {
   const [isVisible, setIsVisible] = useState(false)
   const processRef = useRef(null)
-  const processInView = useInView(processRef, {once: true, amount: 0.3,})
+  const processInView = useInView(processRef, { once: true, amount: 0.3 })
 
   useEffect(() => {
     setIsVisible(true)
@@ -62,7 +60,6 @@ export function ServiziPage() {
             }}
             whileHover={{
               scale: 1.02,
-              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)",
             }}
             whileTap={{ scale: 0.98 }}
           >
@@ -93,7 +90,7 @@ export function ServiziPage() {
             </motion.div>
 
             <motion.h3
-              className="text-2xl sm:text-2xl font-bold mb-2 text-center"
+              className="text-2xl md:text-2xl font-bold mb-2 text-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: isVisible ? 1 : 0 }}
               transition={{
@@ -105,7 +102,7 @@ export function ServiziPage() {
             </motion.h3>
 
             <motion.p
-              className="text-md sm:text-base mb-3 sm:text-left"
+              className="text-md sm:text-base mb-3 sm:text-left md:text-xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: isVisible ? 1 : 0 }}
               transition={{
@@ -117,7 +114,7 @@ export function ServiziPage() {
             </motion.p>
 
             <motion.ul
-              className="space-y-1 mt-2 text-md"
+              className="space-y-1 mt-2 text-md md:text-xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: isVisible ? 1 : 0 }}
               transition={{
@@ -166,9 +163,9 @@ export function ServiziPage() {
         ))}
       </div>
 
-      <div ref={processRef} className="w-full py-32 md:py-25 lg:py-12">
+      <div ref={processRef} className="w-full py-10">
         <motion.h2
-          className="text-4xl text-white text-center font-bold"
+          className="text-3xl sm:text-3xl md:text-4xl text-white text-center font-bold"
           initial={{ opacity: 0, y: 30 }}
           animate={processInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -177,7 +174,7 @@ export function ServiziPage() {
         </motion.h2>
 
         <motion.h3
-          className="text-xl text-white text-center mt-3"
+          className="text-base sm:text-lg md:text-xl text-white text-center mt-2 sm:mt-3"
           initial={{ opacity: 0, y: 20 }}
           animate={processInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -185,24 +182,31 @@ export function ServiziPage() {
           Un approccio metodico per garantire risultati eccellenti
         </motion.h3>
 
-        <div className="mx-auto grid max-w-7xl items-start gap-6 py-12 md:grid-cols-4">
+        <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl gap-6 py-10 px-4 sm:px-6 md:px-8">
           {processo.map((processi, index) => (
             <motion.div
               key={processi.id}
-              className="flex flex-col items-center space-y-4 border border-white rounded-lg p-6 text-center shadow-md"
+              className="flex flex-col items-center space-y-3 border border-white rounded-xl p-4 sm:p-5 md:p-6 text-center shadow-md"
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
-              animate={processInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 50, scale: 0.9 }}
+              animate={
+                processInView
+                  ? { opacity: 1, y: 0, scale: 1 }
+                  : { opacity: 0, y: 50, scale: 0.9 }
+              }
               transition={{ duration: 0.6, delay: 0.6 + index * 0.2 }}
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)",
               }}
               whileTap={{ scale: 0.95 }}
             >
               <motion.div
-                className="flex h-20 w-20 items-center justify-center rounded-full bg-white text-celeste text-5xl font-bold"
+                className="flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-white text-celeste text-3xl sm:text-4xl md:text-5xl font-bold"
                 initial={{ scale: 0, rotate: -360 }}
-                animate={processInView ? { scale: 1, rotate: 0 } : { scale: 0, rotate: -360 }}
+                animate={
+                  processInView
+                    ? { scale: 1, rotate: 0 }
+                    : { scale: 0, rotate: -360 }
+                }
                 transition={{
                   duration: 0.8,
                   delay: 0.8 + index * 0.2,
@@ -213,7 +217,6 @@ export function ServiziPage() {
                 whileHover={{
                   scale: 1.15,
                   rotate: [0, 10, -10, 0],
-                  boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
                   transition: {
                     scale: { duration: 0.2 },
                     rotate: { duration: 0.4 },
@@ -225,7 +228,7 @@ export function ServiziPage() {
               </motion.div>
 
               <motion.h3
-                className="text-2xl text-white font-semibold"
+                className="text-2xl sm:text-2xl md:text-2xl text-white font-semibold"
                 initial={{ opacity: 0 }}
                 animate={processInView ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ duration: 0.5, delay: 1 + index * 0.2 }}
@@ -234,7 +237,7 @@ export function ServiziPage() {
               </motion.h3>
 
               <motion.p
-                className="text-md text-white"
+                className="sm:text-base md:text-xl text-white"
                 initial={{ opacity: 0 }}
                 animate={processInView ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.2 }}
