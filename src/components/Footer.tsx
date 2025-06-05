@@ -21,7 +21,7 @@ export function Footer() {
 
           <div className="flex flex-col items-center text-center">
             <span className="text-white font-semibold mb-1 text-xl">Certificazioni</span>
-            <a href="#" onClick={showBoolean} className="md:block py-1 px-3 text-white hover:text-celeste transition-colors duration-300 active:text-celeste active:transition-colors active:duration-300">
+            <a href="/" onClick={showBoolean} className="md:block py-1 px-3 text-white hover:text-celeste transition-colors duration-300 active:text-celeste active:transition-colors active:duration-300">
               Boolean
             </a>
           </div>
