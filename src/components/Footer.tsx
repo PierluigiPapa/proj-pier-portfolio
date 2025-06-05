@@ -38,7 +38,7 @@ export function Footer() {
         <hr className="my-2 border-gray-200" />
         
         <span className="block text-sm text-white text-center hover:text-celeste transition-colors duration-300 active:text-celeste active:transition-colors active:duration-300">
-          &copy;2025 Pierluigi Papa. Tutti i diritti riservati
+          &copy;2025 Pierluigi Papa. Tutti i diritti riservati.
         </span>
       </div>
     </footer>
