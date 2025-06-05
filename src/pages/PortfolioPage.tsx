@@ -96,34 +96,32 @@ export function PortfolioPage() {
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                     >
                         {progetti.map((progetto) => (
-                            <motion.div
+                            <motion.div className="max-w-[370px] mx-auto rounded-xl overflow-hidden border border-white shadow-xl hover:shadow-lg transition-shadow duration-300 flex flex-col h-full"
                                 key={progetto.id}
                                 variants={itemVariants}
                                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                                className="max-w-[370px] mx-auto rounded-xl overflow-hidden border border-white shadow-xl hover:shadow-lg transition-shadow duration-300"
                             >
                                 <div className="h-44">
-                                    <img
-                                        src={progetto.immagine}
+                                    <img src={progetto.immagine}
                                         alt={progetto.titolo}
                                         className="w-full h-full object-cover opacity-70"
                                     />
                                 </div>
-
-                                <div className="p-6">
-                                    <h3 className="text-xl text-center font-bold text-white mt-2 mb-2">
+                                
+                                <div className="p-6 flex-grow">
+                                    <h3 className="sm:text-xl text-center font-bold text-white mt-2 mb-2 md:text-3xl lg:text-2xl">
                                         {progetto.titolo}
                                     </h3>
-                                    <span className="text-white text-center">
+                                    
+                                    <span className="text-white sm:text-center text-center md:text-center md:text-[20px] lg:text-center lg:text-base">
                                         {progetto.descrizione.includes('.')
-                                            ? progetto.descrizione.slice(0, progetto.descrizione.indexOf('.') + 1)
-                                            : progetto.descrizione}
+                                        ? progetto.descrizione.slice(0, progetto.descrizione.indexOf('.') + 1)
+                                        : progetto.descrizione}
                                     </span>
                                 </div>
-
-                                <div className="flex justify-center items-center">
-                                    <button
-                                        className="h-10 w-40 bg-white rounded-xl border-2 text-celeste hover:bg-celeste hover:text-white mb-3 transition ease-in-out"
+                                
+                                <div className="flex justify-center items-center mt-auto mb-3">
+                                    <button className="h-10 w-40 bg-white rounded-xl border-2 text-celeste hover:bg-celeste hover:text-white transition ease-in-out"
                                         onClick={() => openModal(progetto)}
                                     >
                                         <FontAwesomeIcon icon={faEye} className="mr-1" />
