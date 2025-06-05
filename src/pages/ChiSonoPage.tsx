@@ -58,7 +58,7 @@ export function ChiSonoPage() {
           className="md:w-1/2 flex justify-center px-4"
           initial={{ opacity: 0, x: 50 }}
           animate={bioInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 1 }}
         >
           <img
             src={photos[0]}
@@ -188,7 +188,7 @@ export function ChiSonoPage() {
           className="md:w-1/2 flex justify-center px-4"
           initial={{ opacity: 0, x: 50 }}
           animate={meInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 1 }}
         >
           <img
             src={photos[1]}
