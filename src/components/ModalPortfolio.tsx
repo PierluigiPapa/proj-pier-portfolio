@@ -91,14 +91,14 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                                 <div className="lg:col-span-2">
                                     <div className="mb-6">
-                                        <h3 className="text-xl font-semibold mb-3 text-white">Descrizione dettagliata</h3>
-                                        <p className="text-white">{progetto.descrizione}</p>
+                                        <h3 className="lg:text-xl md:text-2xl sm:text-xl font-semibold mb-3 text-white">Descrizione dettagliata</h3>
+                                        <p className="text-white lg:text-base md:text-xl sm:text-md">{progetto.descrizione}</p>
                                 </div>
                             </div>
 
                             <div className="mb-6">
-                                <h3 className="text-xl font-semibold text-white mb-3">Caratteristiche principali</h3>
-                                <ul className="list-disc pl-5 space-y-1 text-white">
+                                <h3 className="lg:text-xl md:text-2xl sm:text-xl font-semibold text-white mb-3">Caratteristiche principali</h3>
+                                <ul className="list-disc pl-5 space-y-1 text-white lg:text-base md:text-xl sm:text-md">
                                     {progetto.caratteristiche.map((caratteristica, index) => (
                                         <li key={index}>{caratteristica}</li>
                                     ))} 
@@ -115,27 +115,27 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
                                             {progetto.versioni.desktop && (
                                                 <div>
                                                      <FontAwesomeIcon icon={faDesktop} 
-                                                        className={progetto.versioni.desktop ? "text-white text-xl mr-2" : "text-white"}
+                                                        className={progetto.versioni.desktop ? "text-white lg:text-xl md:text-3xl sm:text-xl mr-2" : "text-white"}
                                                     /> 
-                                                    <span className="text-white text-md">Desktop</span>
+                                                    <span className="text-white lg:text-base md:text-xl sm:text-md">Desktop</span>
                                                 </div>
                                             )}   
 
                                             {progetto.versioni.tablet && (
                                                 <div>
                                                     <FontAwesomeIcon icon={faTablet} 
-                                                        className={progetto.versioni.tablet ? "text-white text-xl mr-2" : "text-white"}
+                                                        className={progetto.versioni.tablet ? "text-white lg:text-xl md:text-3xl sm:text-xl mr-2" : "text-white"}
                                                     /> 
-                                                    <span className="text-white text-md">Tablet</span>
+                                                    <span className="text-white lg:text-base md:text-xl sm:text-md">Tablet</span>
                                                 </div>
                                             )}
 
                                             {progetto.versioni.mobile && (
                                                 <div>
                                                     <FontAwesomeIcon icon={faMobile} 
-                                                        className={progetto.versioni.mobile ? "text-white text-xl mr-2" : "text-white"}
+                                                        className={progetto.versioni.mobile ? "text-white lg:text-xl md:text-3xl sm:text-xl mr-2" : "text-white"}
                                                     /> 
-                                                    <span className="text-white text-md">Mobile</span>
+                                                    <span className="text-white lg:text-base md:text-xl sm:text-md">Mobile</span>
                                                 </div>
                                             )}
                                         </div>
@@ -148,21 +148,21 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
                             <h3 className="text-2xl font-semibold mb-6 text-white">Dettagli progetto</h3>
 
                             <div className="mb-6">
-                                <h4 className="text-[17px] font-semibold text-white mb-3">Tecnologie</h4>
+                                <h4 className="text-[20px] font-semibold text-white mb-3">Tecnologie</h4>
                                 <div className="flex flex-wrap gap-2">
                                     {progetto.linguaggi.map((framework, index) => (
-                                        <span key={index} className="px-3 py-1 text-white  text-sm rounded-md">{framework}</span>
+                                        <span key={index} className="px-3 py-1 text-white lg:text-[15px] md:text-[18px] sm:text-xlrounded-md">{framework}</span>
                                     ))}
                                 </div>
                             </div>
 
                             {progetto.api && progetto.api.length > 0 && (
                                 <div className="mb-6">
-                                    <h4 className="text-[17px] font-semibold text-white mb-3">Api</h4>
+                                    <h4 className="text-[20px] font-semibold text-white mb-3">Api</h4>
                                     
                                     <div className="flex flex-wrap gap-2">
                                         {progetto.api.map((api, index) => (
-                                            <span key={index} className="px-3 py-1 text-white  text-sm rounded-md">{api}</span>
+                                            <span key={index} className="px-3 py-1 text-white lg:text-[15px] md:text-[18px] sm:text-xl rounded-md">{api}</span>
                                         ))}
                                     </div>
                                 </div>

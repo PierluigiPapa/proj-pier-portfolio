@@ -102,7 +102,7 @@ export function ServiziPage() {
             </motion.h3>
 
             <motion.p
-              className="text-md sm:text-base mb-3 sm:text-left md:text-xl"
+              className="sm:text-base lg:text-base md:text-xl text-white"
               initial={{ opacity: 0 }}
               animate={{ opacity: isVisible ? 1 : 0 }}
               transition={{
@@ -114,7 +114,7 @@ export function ServiziPage() {
             </motion.p>
 
             <motion.ul
-              className="space-y-1 mt-2 text-md md:text-xl"
+              className="space-y-1 mt-2 sm:text-base lg:text-base md:text-xl text-white"
               initial={{ opacity: 0 }}
               animate={{ opacity: isVisible ? 1 : 0 }}
               transition={{
@@ -237,7 +237,7 @@ export function ServiziPage() {
               </motion.h3>
 
               <motion.p
-                className="sm:text-base md:text-xl text-white"
+                className="sm:text-base lg:text-base md:text-xl text-white"
                 initial={{ opacity: 0 }}
                 animate={processInView ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.2 }}
