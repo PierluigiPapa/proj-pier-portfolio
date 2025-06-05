@@ -26,23 +26,31 @@ export function Header() {
             <div className="absolute right-0 mt-2 w-44 divide-y bg-linear-to-bl from-gray-1 to-gray-2 divide-gray-100 rounded-lg shadow-lg">
               <ul className="py-2 text-sm text-white">
                 <li>
-                  <Link to="/" className="block px-4 py-2 hover:text-celeste active:text-celeste transition-colors duration-300 ease-in-out transform">
-                    Home
+                  <Link to="/" 
+                    onClick={() => setDropdownOpen(false)}
+                    className="block px-4 py-2 hover:text-celeste active:text-celeste transition-colors duration-300 ease-in-out transform">
+                      Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="/chi-sono" className="block px-4 py-2 hover:text-celeste active:text-celeste transition-colors duration-300 ease-in-out transform">
-                    Chi sono
+                  <Link to="/chi-sono" 
+                    onClick={() => setDropdownOpen(false)}
+                    className="block px-4 py-2 hover:text-celeste active:text-celeste transition-colors duration-300 ease-in-out transform">
+                      Chi sono
                   </Link>
                 </li>
                 <li>
-                  <Link to="/portfolio" className="block px-4 py-2 hover:text-celeste active:text-celeste transition-colors duration-300 ease-in-out transform">
-                    Portfolio
+                  <Link to="/portfolio"
+                    onClick={() => setDropdownOpen(false)}
+                    className="block px-4 py-2 hover:text-celeste active:text-celeste transition-colors duration-300 ease-in-out transform">
+                      Portfolio
                   </Link>
                 </li>
                 <li>
-                  <Link to="/servizi" className="block px-4 py-2 hover:text-celeste active:text-celeste transition-colors duration-300 ease-in-out transform">
-                    Servizi
+                  <Link to="/servizi" 
+                    onClick={() => setDropdownOpen(false)}
+                    className="block px-4 py-2 hover:text-celeste active:text-celeste transition-colors duration-300 ease-in-out transform">
+                      Servizi
                   </Link>
                 </li>
               </ul>
