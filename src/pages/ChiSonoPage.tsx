@@ -68,7 +68,6 @@ export function ChiSonoPage() {
         </motion.div>
       </section>
 
-      {/* CARRIERA */}
       <section
         ref={careerRef}
         className="text-white py-10 px-4 md:px-12"
@@ -81,7 +80,7 @@ export function ChiSonoPage() {
             transition={{ duration: 0.6 }}
           >
             <img
-              src={photos[0]}
+              src={photos[1]}
               className="w-full max-w-[500px] h-[500px] object-cover rounded-xl shadow-lg"
               alt=""
             />
@@ -153,7 +152,6 @@ export function ChiSonoPage() {
         </div>
       </section>
 
-      {/* INTERESSI PERSONALI */}
       <section
         ref={meRef}
         className="flex flex-col md:flex-row gap-8 py-10 px-4 md:px-12 items-start justify-start"
@@ -191,7 +189,7 @@ export function ChiSonoPage() {
           transition={{ duration: 0.6, delay: 1 }}
         >
           <img
-            src={photos[1]}
+            src={photos[2]}
             className="w-full max-w-[500px] h-[500px] object-cover rounded-xl shadow-lg"
             alt=""
           />
