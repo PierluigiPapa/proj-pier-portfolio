@@ -5,7 +5,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background: rgb(29,112,162);
-  background: linear-gradient(#1D70A2, #173753);
+  background: linear-gradient(#009dff, #173753);
 }
 
 @theme {
