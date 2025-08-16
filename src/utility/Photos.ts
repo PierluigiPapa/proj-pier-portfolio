@@ -1,6 +1,6 @@
-import Pierluigi1 from "../assets/images/photos/Pierluigi_2.jpg"
-import Pierluigi2 from "../assets/images/photos/Pierluigi_4.jpg"
-import Pierluigi3 from "../assets/images/photos/Pierluigi_3.jpg"
+import Pierluigi1 from "../assets/images/photos/Pierluigi_2.webp"
+import Pierluigi2 from "../assets/images/photos/Pierluigi_4.webp"
+import Pierluigi3 from "../assets/images/photos/Pierluigi_3.webp"
 
 import Boolean from "../assets/images/photos/Attestato Boolean.png"
 

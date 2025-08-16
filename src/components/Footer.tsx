@@ -15,7 +15,7 @@ export function Footer() {
 
   const showUdemy = () => {
     const link = document.createElement('a');
-    link.href = '/Certificato_Angular_SpringBoot.jpg';
+    link.href = '/Certificato_Angular_SpringBoot.webp';
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     document.body.appendChild(link);
