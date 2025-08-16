@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Logo  from "../assets/Logo.png"
+import Logo  from "../assets/Logo.webp"
 
 
 export function Header() {

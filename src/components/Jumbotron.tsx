@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import PierluigiPapa from '../assets/PierluigiPapa.png'
+import PierluigiPapa from '../assets/PierluigiPapa.webp'
 
 
 export function Jumbotron() {
