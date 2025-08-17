@@ -13,7 +13,7 @@ export function Header() {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="text-white text-2xl hover:text-celeste transition-colors duration-300 ease-in-out transform">
           <Link to="/">
-            <img src={Logo} alt="Logo Pierluigi Papa WD"className="h-32 object-contain items-center"/>
+            <img src={Logo} alt="Logo Pierluigi Papa WD"className="h-32 w-32 object-contain items-center"/>
           </Link>
         </div>
 

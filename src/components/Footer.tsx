@@ -37,7 +37,7 @@ export function Footer() {
           <img
             src={Logo}
             alt="Logo_Pierluigi_Papa_WD"
-            className="h-24 object-contain opacity-50 flex my-2"
+            className="h-24 w-24 object-contain opacity-50 flex my-2"
           />
 
           <div className="flex flex-col items-center text-center">
