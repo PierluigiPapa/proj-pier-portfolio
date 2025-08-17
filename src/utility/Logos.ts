@@ -20,7 +20,7 @@ import PostgreSQL from "../assets/images/logos/PostgreSQL.webp";
 import ReactJS from "../assets/images/logos/React.webp";
 import SASS from "../assets/images/logos/SASS.webp";
 import SMSS from "../assets/images/logos/SSMS.webp";
-import SpringBoot from "../assets/images/logos/Spring Boot.webp";
+import SpringBoot from "../assets/images/logos/SpringBoot.webp";
 import Tailwind from "../assets/images/logos/Tailwind.webp"
 import TypeScript from "../assets/images/logos/TypeScript.webp";
 import VisualStudio from "../assets/images/logos/Visual Studio.webp";
