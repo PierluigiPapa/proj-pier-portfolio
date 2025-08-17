@@ -79,7 +79,7 @@ export function Jumbotron() {
                 </div>
 
                 <div className="w-full md:w-2xl flex justify-center items-center">
-                   <img src={PierluigiPapa} className={`transition-opacity duration-500 ${showPhoto ? 'opacity-100' : 'opacity-0'}`}   alt="" />
+                   <img src={PierluigiPapa} className={`transition-opacity duration-500 ${showPhoto ? 'opacity-100' : 'opacity-0'}`} alt="Pierluigi Papa" />
                 </div>
             </div>       
         </section>

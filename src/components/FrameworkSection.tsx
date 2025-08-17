@@ -21,7 +21,7 @@ export function FrameworkSection() {
                 Competenze tecniche
             </h1>
 
-            <div className="flex justify-center items-center md:hidden h-32 overflow-hidden mt-6">
+            <div className="flex justify-center items-center md:hidden h-32 w-32 overflow-hidden mt-6">
                 <img src={logos[current]} alt={`logo ${current}`} className="max-h-32"/>
             </div>
 
