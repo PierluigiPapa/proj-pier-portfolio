@@ -13,6 +13,7 @@ import MAMP from '../assets/images/logos/MAMP.webp';
 import MongoDB from '../assets/images/logos/MongoDB.webp';
 import MySQL from '../assets/images/logos/MySQL.webp';
 import NET from '../assets/images/logos/NET.webp';
+import NextJS from '../assets/images/logos/NextJS.webp';
 import NodeJS from '../assets/images/logos/NodeJS.webp';
 import PHP from '../assets/images/logos/PHP.webp';
 import PHPMyAdmin from '../assets/images/logos/PhpMyAdmin.webp';
@@ -44,6 +45,7 @@ export const logos = [
   MongoDB,
   MySQL,
   NET,
+  NextJS,
   NodeJS,
   PHP,
   PHPMyAdmin,
