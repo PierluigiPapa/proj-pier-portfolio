@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Menu } from 'lucide-react';
 import Logo from '../assets/Logo.webp';
 
 export function Header() {
@@ -25,7 +24,7 @@ export function Header() {
             onClick={() => setDropdownOpen(!isDropdownOpen)}
             className='text-white p-2 text-2xl active:text-celeste'
           >
-            <FontAwesomeIcon icon={faBars} />
+            <Menu />
           </button>
 
           {isDropdownOpen && (

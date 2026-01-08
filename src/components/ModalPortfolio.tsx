@@ -1,9 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Portfolio } from '../models/Portfolio';
 import { AnimatePresence, motion } from 'framer-motion';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDesktop, faMobile, faTablet, faVideo, faXmark } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { Monitor, Smartphone, Tablet, Video, X, Github } from 'lucide-react';
 
 interface DettagliProgettoProps {
   progetto: Portfolio | null;
@@ -83,7 +81,7 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
                 className='p-2 rounded-full hover:bg-muted transition-colors text-2xl'
                 aria-label='Chiudi'
               >
-                <FontAwesomeIcon icon={faXmark} className='text-white font-bold' />
+                <X className='text-white font-bold' />
               </button>
             </div>
 
@@ -124,11 +122,10 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
                       <div className='flex flex-row items-center gap-2 p-3 rounded-lg'>
                         {progetto.versioni.desktop && (
                           <div>
-                            <FontAwesomeIcon
-                              icon={faDesktop}
+                            <Monitor
                               className={
                                 progetto.versioni.desktop
-                                  ? 'text-white lg:text-xl md:text-3xl sm:text-xl mr-2'
+                                  ? 'text-white lg:w-5 lg:h-5 md:w-8 md:h-8 w-5 h-5 mr-2'
                                   : 'text-white'
                               }
                             />
@@ -140,11 +137,10 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
 
                         {progetto.versioni.tablet && (
                           <div>
-                            <FontAwesomeIcon
-                              icon={faTablet}
+                            <Tablet
                               className={
                                 progetto.versioni.tablet
-                                  ? 'text-white lg:text-xl md:text-3xl sm:text-xl mr-2'
+                                  ? 'text-white lg:w-5 lg:h-5 md:w-8 md:h-8 w-5 h-5 mr-2'
                                   : 'text-white'
                               }
                             />
@@ -156,11 +152,10 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
 
                         {progetto.versioni.mobile && (
                           <div>
-                            <FontAwesomeIcon
-                              icon={faMobile}
+                            <Smartphone
                               className={
                                 progetto.versioni.mobile
-                                  ? 'text-white lg:text-xl md:text-3xl sm:text-xl mr-2'
+                                  ? 'text-white lg:w-5 lg:h-5 md:w-8 md:h-8 w-5 h-5 mr-2'
                                   : 'text-white'
                               }
                             />
@@ -214,7 +209,7 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
                 >
                   <a href={progetto.link} target='_blank' rel='noopener noreferrer'>
                     <button className='bg-celeste text-white border-2 border-white h-10 px-2 rounded-md hover:bg-white hover:border-2 hover:border-celeste hover:text-celeste transition ease-in-out flex items-center space-x-2'>
-                      <FontAwesomeIcon icon={faVideo} />
+                      <Video className='w-6 h-6' />
                       <span>Video</span>
                     </button>
                   </a>
@@ -222,7 +217,7 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
                   {progetto.github && (
                     <a href={progetto.github} target='_blank' rel='noopener noreferrer'>
                       <button className='bg-celeste text-white border-2 border-white h-10 px-2 rounded-md hover:bg-white hover:border-2 hover:border-celeste hover:text-celeste transition ease-in-out flex items-center space-x-2'>
-                        <FontAwesomeIcon icon={faGithub} />
+                        <Github className='w-6 h-6' />
                         <span>GitHub</span>
                       </button>
                     </a>

@@ -1,7 +1,7 @@
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { LucideIcon } from 'lucide-react';
 
 export type Services = {
-  icona: IconDefinition;
+  icona: LucideIcon;
   titolo: string;
   descrizione: string;
   caratteristiche: string[];

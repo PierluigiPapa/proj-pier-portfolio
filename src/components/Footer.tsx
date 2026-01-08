@@ -1,5 +1,4 @@
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ArrowUp } from 'lucide-react';
 import Logo from '../assets/Logo.webp';
 
 export function Footer() {
@@ -80,7 +79,7 @@ export function Footer() {
             onClick={scrollToTop}
             className='block md:hidden text-white text-center active:text-celeste active:transition-colors active:duration-300'
           >
-            <FontAwesomeIcon icon={faArrowUp} className='text-xl my-2' />
+            <ArrowUp className='text-xl my-2' />
           </a>
         </div>
 

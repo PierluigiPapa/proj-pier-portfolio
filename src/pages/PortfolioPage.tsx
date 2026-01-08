@@ -1,5 +1,4 @@
-import { faAngleDown, faEye } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ChevronDown, Eye } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { progetti } from '../utility/ProjectData';
 import { ModalPortfolio } from '../components/ModalPortfolio';
@@ -81,7 +80,7 @@ export function PortfolioPage() {
                   }}
                   className='text-white'
                 >
-                  <FontAwesomeIcon icon={faAngleDown} className='text-4xl' />
+                  <ChevronDown className='text-4xl' />
                 </motion.div>
               </motion.div>
             </div>
@@ -128,10 +127,10 @@ export function PortfolioPage() {
 
                 <div className='flex justify-center items-center mt-auto mb-3'>
                   <button
-                    className='h-10 w-40 bg-white rounded-xl border-2 text-celeste hover:bg-celeste hover:text-white transition ease-in-out'
+                    className='h-10 w-40 bg-white rounded-xl border-2 text-celeste hover:bg-celeste hover:text-white transition ease-in-out flex justify-center items-center'
                     onClick={() => openModal(progetto)}
                   >
-                    <FontAwesomeIcon icon={faEye} className='mr-1' />
+                    <Eye className='mr-2 w-5 h-5' />
                     <span>Dettagli</span>
                   </button>
                 </div>

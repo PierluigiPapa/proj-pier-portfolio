@@ -1,9 +1,9 @@
-import { faLaptop, faCogs } from '@fortawesome/free-solid-svg-icons';
+import { Laptop, Settings } from 'lucide-react';
 import { Services } from '../models/Services';
 
 export const services: Services[] = [
   {
-    icona: faLaptop,
+    icona: Laptop,
     titolo: 'Sviluppo Siti Web',
     descrizione:
       'Creazione di siti web personalizzati, responsive e ottimizzati per diverse esigenze aziendali e professionali.',
@@ -15,7 +15,7 @@ export const services: Services[] = [
     ],
   },
   {
-    icona: faCogs,
+    icona: Settings,
     titolo: 'Sviluppo Backend e Integrazione API',
     descrizione:
       'Sviluppo di soluzioni backend scalabili e integrazione di API per connettere il sito a sistemi esterni.',

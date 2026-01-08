@@ -2,8 +2,7 @@ import { motion, useInView } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
 import { services } from '../utility/ServicesData';
 import { processo } from '../utility/ProcessoLavorativo';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleCheck } from '@fortawesome/free-solid-svg-icons/faCircleCheck';
+import { CircleCheck } from 'lucide-react';
 
 export function ServiziPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -86,7 +85,7 @@ export function ServiziPage() {
                 },
               }}
             >
-              <FontAwesomeIcon icon={service.icona} />
+              <service.icona />
             </motion.div>
 
             <motion.h3
@@ -153,7 +152,7 @@ export function ServiziPage() {
                       transition: { duration: 0.3 },
                     }}
                   >
-                    <FontAwesomeIcon icon={faCircleCheck} className='mt-1' />
+                    <CircleCheck className='mt-1' />
                   </motion.div>
                   <span>{feature}</span>
                 </motion.li>
