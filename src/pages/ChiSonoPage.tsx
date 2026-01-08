@@ -123,8 +123,8 @@ export function ChiSonoPage() {
               animate={careerInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              Successivamente, ho avuto l’opportunità di lavorare presso
-              l’azienda S.I.A. di Brindisi, dove ho partecipato attivamente allo
+              Successivamente, ho avuto l'opportunità di lavorare presso
+              l'azienda S.I.A. di Brindisi, dove ho partecipato attivamente allo
               sviluppo di progetti interni e progetti esterni per i clienti,
               collaborando con il team su soluzioni software personalizzate. In
               questa esperienza ho approfondito le mie competenze tecniche,
@@ -133,7 +133,8 @@ export function ChiSonoPage() {
               professionali come Visual Studio e SQL Server Management Studio.
               Questa esperienza mi ha permesso di crescere anche dal punto di
               vista del problem solving e del lavoro in team in un contesto
-              aziendale reale.            </motion.p>
+              aziendale reale.            
+              </motion.p>
 
             <motion.p
               className="mt-4 text-justify leading-relaxed"
@@ -141,12 +142,36 @@ export function ChiSonoPage() {
               animate={careerInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              Attualmente sto continuando il mio percorso di crescita
-              professionale frequentando corsi di approfondimento su tecnologie
-              moderne e molto richieste nel mercato del lavoro, tra cui Angular,
-              Java, PostgreSQL, MongoDB, Spring Boot e Docker, con l’obiettivo
-              di ampliare ulteriormente le mie competenze in ambito full-stack e
-              nello sviluppo di applicazioni scalabili e performanti.
+              Dopo aver concluso la mia precedente esperienza lavorativa, 
+              ho scelto di investire nel mio futuro dedicandomi allo studio delle 
+              tecnologie più richieste dal mercato. Ho consolidato il mio profilo 
+              Full-Stack approfondendo l'uso di Java, Spring Boot, Angular e Docker, 
+              nella gestione di database relazionali (PostgreSQL) e non-relazionali (MongoDB) 
+              per creare architetture scalabili e performanti.
+            </motion.p>
+
+
+            <motion.p
+              className="mt-4 text-justify leading-relaxed"
+              initial={{ opacity: 0 }}
+              animate={careerInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
+              Attualmente proseguo la mia carriera presso Primed srl, 
+              importante azienda pugliese nel settore delle zanzariere, 
+              dove il mio ruolo è poliedrico: svolgo, oltre alla mansione di 
+              Full Stack Developer, compiti cruciali come Software Analyst Programmer, 
+              implementando soluzioni all'avanguardia con Next.js, 
+              Prisma e Zenstack. 
+              In questo contesto, ho integrato l'utilizzo dell'intelligenza artificiale, 
+              in particolare ChatGPT, per lo sviluppo di funzionalità innovative all'interno 
+              dei progetti aziendali. 
+              
+              Parallelamente, opero come UX/UI Designer utilizzando Figma per la 
+              progettazione delle interfacce grafiche, curando così l&apos;
+              intero ciclo di vita del prodotto digitale: dall&apos;
+              analisi funzionale e il design dell'esperienza utente fino allo sviluppo 
+              tecnico e all'integrazione di soluzioni basate su IA. 
             </motion.p>
           </div>
         </div>

@@ -8,8 +8,8 @@ export const progetti: Portfolio[] = [
         titolo: "BoolBnB",
         descrizione: "BoolBnB è una piattaforma per la prenotazione di alloggi, sviluppata in team come progetto finale del corso Boolean. Permette ai proprietari di gestire appartamenti, promuoverli tramite sponsorizzazioni e comunicare con i clienti; agli utenti di cercare alloggi personalizzando la ricerca e contattare i proprietari attraverso un modulo dedicato.",
         immagine: Project[0],
-        link: "https://youtu.be/zdr4tcAp8zk", 
-        github: "", 
+        link: "https://youtu.be/zdr4tcAp8zk",
+        github: "",
         api: ["TomTom", "Braintree"],
         linguaggi: ["HTML", "CSS", "Bootstrap", "SASS", "JavaScript", "VueJS", "Vite", "PHP", "MySQL", "Laravel"],
         versioni: {
@@ -51,7 +51,7 @@ export const progetti: Portfolio[] = [
     {
         id: 3,
         titolo: "MasterStudy",
-        descrizione: "MasterStudy è una piattaforma educativa sviluppata per simulare un sito dedicato all’apprendimento online. Strutturata in sezioni modulari, include funzionalità come countdown per le iscrizioni, sezioni dinamiche con piani tariffari e recensioni interattive degli utenti. Le card dei corsi mostrano i prezzi e possono essere cliccate per interagire. È presente una call to action per iscriversi ai corsi inviando una email diretta dal sito.",
+        descrizione: "MasterStudy è una piattaforma educativa sviluppata per simulare un sito dedicato all'apprendimento online. Strutturata in sezioni modulari, include funzionalità come countdown per le iscrizioni, sezioni dinamiche con piani tariffari e recensioni interattive degli utenti. Le card dei corsi mostrano i prezzi e possono essere cliccate per interagire. È presente una call to action per iscriversi ai corsi inviando una email diretta dal sito.",
         immagine: Project[2],
         link: "https://youtu.be/jbv-Gv-bwHg",
         github: "https://github.com/PierluigiPapa/proj-html-vuejs",
@@ -85,5 +85,5 @@ export const progetti: Portfolio[] = [
         },
         caratteristiche: ["Select option per filtrare le carte in base all'archetipo",],
     }
- 
+
 ];

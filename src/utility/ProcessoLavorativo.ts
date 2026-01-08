@@ -9,12 +9,12 @@ export const processo: Processo[] = [
   {
     id: 2,
     titolo: "Progettazione",
-    descrizione: "Sviluppiamo wireframe e prototipi interattivi, definendo l’architettura dell’informazione e l’esperienza utente della web app.",
+    descrizione: "Sviluppiamo wireframe e prototipi interattivi, definendo l'architettura dell'informazione e l'esperienza utente della web app.",
   },
   {
     id: 3,
     titolo: "Sviluppo",
-    descrizione: "Trasformiamo il progetto in codice, utilizzando tecnologie moderne per realizzare un’app performante, scalabile e manutenibile.",
+    descrizione: "Trasformiamo il progetto in codice, utilizzando tecnologie moderne per realizzare un'app performante, scalabile e manutenibile.",
   },
   {
     id: 4,
