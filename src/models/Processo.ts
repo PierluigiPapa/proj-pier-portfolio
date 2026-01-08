@@ -1,5 +1,5 @@
 export type Processo = {
-    id: number,
-    titolo: string,
-    descrizione: string,
-}
+  id: number;
+  titolo: string;
+  descrizione: string;
+};
