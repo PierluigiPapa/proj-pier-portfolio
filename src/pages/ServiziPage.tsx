@@ -85,7 +85,7 @@ export function ServiziPage() {
                 },
               }}
             >
-              <service.icona />
+              <service.icona size={64}/>
             </motion.div>
 
             <motion.h3

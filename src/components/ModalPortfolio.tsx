@@ -14,15 +14,11 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
 
   useEffect(() => {
     const handleEscapeKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isOpen) {
-        onClose();
-      }
+      if (e.key === 'Escape' && isOpen) onClose();
     };
 
     document.addEventListener('keydown', handleEscapeKey);
-    return () => {
-      document.removeEventListener('keydown', handleEscapeKey);
-    };
+    return () => document.removeEventListener('keydown', handleEscapeKey);
   }, [isOpen, onClose]);
 
   useEffect(() => {
@@ -32,13 +28,8 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
       }
     };
 
-    if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+    if (isOpen) document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen, onClose]);
 
   if (!isOpen || !progetto) return null;
@@ -48,22 +39,18 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
     visible: {
       opacity: 1,
       scale: 1,
-      transition: {
-        duration: 0.3,
-      },
+      transition: { duration: 0.3 },
     },
     exit: {
       opacity: 0,
       scale: 0.9,
-      transition: {
-        duration: 0.2,
-      },
+      transition: { duration: 0.2 },
     },
   };
 
   return (
     <AnimatePresence>
-      {isOpen && progetto && (
+      {isOpen && (
         <div className='fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4'>
           <motion.div
             ref={modalRef}
@@ -74,151 +61,123 @@ export function ModalPortfolio({ progetto, isOpen, onClose }: DettagliProgettoPr
             className='border-2 border-white w-full max-w-4xl shadow-xl max-h-[90vh] overflow-y-auto'
             onClick={(e) => e.stopPropagation()}
           >
+            {/* HEADER */}
             <div className='sticky top-0 z-10 flex justify-between items-center p-4 bg-celeste/50 backdrop-blur-sm border-b-2 border-white'>
-              <h2 className='text-3xl font-bold text-center text-white'>{progetto.titolo}</h2>
+              <h2 className='text-3xl font-bold text-white'>{progetto.titolo}</h2>
               <button
                 onClick={onClose}
-                className='p-2 rounded-full hover:bg-muted transition-colors text-2xl'
+                className='p-2 rounded-full hover:bg-muted transition-colors'
                 aria-label='Chiudi'
               >
-                <X className='text-white font-bold' />
+                <X className='text-white' />
               </button>
             </div>
 
+            {/* BODY */}
             <div className='p-6 bg-celeste/50'>
-              <div className='mb-3 h rounded-xl overflow-hidden md:mb-8'>
-                <img src={progetto.immagine} alt={progetto.titolo} className='object-contain' />
+              <div className='mb-6 rounded-xl overflow-hidden'>
+                <img
+                  src={progetto.immagine}
+                  alt={progetto.titolo}
+                  className='object-contain w-full'
+                />
               </div>
 
               <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
                 <div className='lg:col-span-2'>
-                  <div className='mb-6'>
-                    <h3 className='lg:text-xl md:text-2xl sm:text-xl font-semibold mb-3 text-white'>
-                      Descrizione dettagliata
-                    </h3>
-                    <p className='text-white lg:text-base md:text-xl sm:text-md'>
-                      {progetto.descrizione}
-                    </p>
-                  </div>
+                  <h3 className='text-xl font-semibold mb-3 text-white'>
+                    Descrizione dettagliata
+                  </h3>
+                  <p className='text-white'>{progetto.descrizione}</p>
                 </div>
 
-                <div className='mb-6'>
-                  <h3 className='lg:text-xl md:text-2xl sm:text-xl font-semibold text-white mb-3'>
+                <div>
+                  <h3 className='text-xl font-semibold text-white mb-3'>
                     Caratteristiche principali
                   </h3>
-                  <ul className='list-disc pl-5 space-y-1 text-white lg:text-base md:text-xl sm:text-md'>
-                    {progetto.caratteristiche.map((caratteristica, index) => (
-                      <li key={index}>{caratteristica}</li>
+                  <ul className='list-disc pl-5 space-y-1 text-white'>
+                    {progetto.caratteristiche.map((c, i) => (
+                      <li key={i}>{c}</li>
                     ))}
                   </ul>
                 </div>
               </div>
 
-              <div className='space-y-6 mb-4'>
-                <div className='p-6 rounded-xl border-2 border-white shadow-sm'>
-                  <h3 className='text-2xl text-white font-semibold mb-4'>Versioni supportate</h3>
-                  {progetto.versioni && (
-                    <div className='flex gap-6 justify-center items-center text-center'>
-                      <div className='flex flex-row items-center gap-2 p-3 rounded-lg'>
-                        {progetto.versioni.desktop && (
-                          <div>
-                            <Monitor
-                              className={
-                                progetto.versioni.desktop
-                                  ? 'text-white lg:w-5 lg:h-5 md:w-8 md:h-8 w-5 h-5 mr-2'
-                                  : 'text-white'
-                              }
-                            />
-                            <span className='text-white lg:text-base md:text-xl sm:text-md'>
-                              Desktop
-                            </span>
-                          </div>
-                        )}
+              {/* VERSIONI SUPPORTATE */}
+              <div className='mt-8 p-6 rounded-xl border-2 border-white shadow-sm'>
+                <h3 className='text-2xl text-white font-semibold mb-6 text-center'>
+                  Versioni supportate
+                </h3>
 
-                        {progetto.versioni.tablet && (
-                          <div>
-                            <Tablet
-                              className={
-                                progetto.versioni.tablet
-                                  ? 'text-white lg:w-5 lg:h-5 md:w-8 md:h-8 w-5 h-5 mr-2'
-                                  : 'text-white'
-                              }
-                            />
-                            <span className='text-white lg:text-base md:text-xl sm:text-md'>
-                              Tablet
-                            </span>
-                          </div>
-                        )}
-
-                        {progetto.versioni.mobile && (
-                          <div>
-                            <Smartphone
-                              className={
-                                progetto.versioni.mobile
-                                  ? 'text-white lg:w-5 lg:h-5 md:w-8 md:h-8 w-5 h-5 mr-2'
-                                  : 'text-white'
-                              }
-                            />
-                            <span className='text-white lg:text-base md:text-xl sm:text-md'>
-                              Mobile
-                            </span>
-                          </div>
-                        )}
+                {progetto.versioni && (
+                  <div className='flex justify-center gap-10'>
+                    {progetto.versioni.desktop && (
+                      <div className='flex flex-col items-center gap-2'>
+                        <Monitor className='text-white w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16' />
+                        <span className='text-white'>Desktop</span>
                       </div>
-                    </div>
-                  )}
-                </div>
+                    )}
+
+                    {progetto.versioni.tablet && (
+                      <div className='flex flex-col items-center gap-2'>
+                        <Tablet className='text-white w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16' />
+                        <span className='text-white'>Tablet</span>
+                      </div>
+                    )}
+
+                    {progetto.versioni.mobile && (
+                      <div className='flex flex-col items-center gap-2'>
+                        <Smartphone className='text-white w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16' />
+                        <span className='text-white'>Mobile</span>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
 
-              <div className='p-6 rounded-xl border-2 border-white shadow-sm h-fit'>
-                <h3 className='text-2xl font-semibold mb-6 text-white'>Dettagli progetto</h3>
+              {/* DETTAGLI PROGETTO */}
+              <div className='mt-8 p-6 rounded-xl border-2 border-white shadow-sm'>
+                <h3 className='text-2xl font-semibold mb-6 text-white'>
+                  Dettagli progetto
+                </h3>
 
                 <div className='mb-6'>
-                  <h4 className='text-[20px] font-semibold text-white mb-3'>Tecnologie</h4>
+                  <h4 className='text-lg font-semibold text-white mb-3'>Tecnologie</h4>
                   <div className='flex flex-wrap gap-2'>
-                    {progetto.linguaggi.map((framework, index) => (
-                      <span
-                        key={index}
-                        className='px-3 py-1 text-white lg:text-[15px] md:text-[18px] sm:text-xlrounded-md'
-                      >
-                        {framework}
+                    {progetto.linguaggi.map((l, i) => (
+                      <span key={i} className='text-white'>
+                        {l}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                {progetto.api && progetto.api.length > 0 && (
+                {progetto.api?.length > 0 && (
                   <div className='mb-6'>
-                    <h4 className='text-[20px] font-semibold text-white mb-3'>Api</h4>
-
+                    <h4 className='text-lg font-semibold text-white mb-3'>API</h4>
                     <div className='flex flex-wrap gap-2'>
-                      {progetto.api.map((api, index) => (
-                        <span
-                          key={index}
-                          className='px-3 py-1 text-white lg:text-[15px] md:text-[18px] sm:text-xl rounded-md'
-                        >
-                          {api}
+                      {progetto.api.map((a, i) => (
+                        <span key={i} className='text-white'>
+                          {a}
                         </span>
                       ))}
                     </div>
                   </div>
                 )}
 
-                <div
-                  className={`flex ${progetto.github} ? : 'flex justify-center items-center space-x-4 ': '' gap-4`}
-                >
+                <div className='flex justify-center gap-4'>
                   <a href={progetto.link} target='_blank' rel='noopener noreferrer'>
-                    <button className='bg-celeste text-white border-2 border-white h-10 px-2 rounded-md hover:bg-white hover:border-2 hover:border-celeste hover:text-celeste transition ease-in-out flex items-center space-x-2'>
-                      <Video className='w-6 h-6' />
-                      <span>Video</span>
+                    <button className='bg-celeste text-white border-2 border-white h-10 px-4 rounded-md flex items-center gap-2 hover:bg-white hover:text-celeste transition'>
+                      <Video className='w-5 h-5' />
+                      Video
                     </button>
                   </a>
 
                   {progetto.github && (
                     <a href={progetto.github} target='_blank' rel='noopener noreferrer'>
-                      <button className='bg-celeste text-white border-2 border-white h-10 px-2 rounded-md hover:bg-white hover:border-2 hover:border-celeste hover:text-celeste transition ease-in-out flex items-center space-x-2'>
-                        <Github className='w-6 h-6' />
-                        <span>GitHub</span>
+                      <button className='bg-celeste text-white border-2 border-white h-10 px-4 rounded-md flex items-center gap-2 hover:bg-white hover:text-celeste transition'>
+                        <Github className='w-5 h-5' />
+                        GitHub
                       </button>
                     </a>
                   )}
